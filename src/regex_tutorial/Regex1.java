@@ -6,7 +6,7 @@ public class Regex1 {
 
 	public static void main(String[]agrs) {
 		
-		String longString = "  Derec Banas CA 12345 PA john._%-smith@gmail.com 055-333-6852 055 333 6852 82-055-333-6852 (82)055-333-6852";
+		String longString = "  Derec Banas CA 12345  91051 PA john._%-smith@gmail.com 055-333-6852 055 333 6852 82-055-333-6852 (82)055-333-6852";
 		String strangeString = " 1Z aaa **** *** {{{ {{ { ";
 		
 //		System.out.println("\r 1 : 단어 찾기");
@@ -47,7 +47,7 @@ public class Regex1 {
 				// 위 아래 같음.
 //		regexChecker("(\\{+)", strangeString);  //__ {{{  , {{ , { 출력
 		
-			// 		{5,}  : minimum length = 5 / maximum length = none ( 띄어쓰기 유의 ) 
+			// 		{5,}  : minimum length = 5 / maximum length = none ( 띄어쓰기 없음 유의 ) 
 			//  	+   :  최소 한번 이상 proceed 하라는 지시 ({1,} 와 같음)
 			//  	- ^ * + ? {} [] \ | ()   :  
 					// ^ : caret
