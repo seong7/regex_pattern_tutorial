@@ -6,7 +6,7 @@ public class Regex1 {
 
 	public static void main(String[]agrs) {
 		
-		String longString = " Derec Banas CA 12345 PA (412)555-1212 1-(412)555-1212 john._%-smith@hotmail.com 412-555-1234 412 555 1234";
+		String longString = "  Derec Banas CA 12345 PA john._%-smith@gmail.com 055-333-6852 055 333 6852 82-055-333-6852 (82)055-333-6852";
 		String strangeString = " 1Z aaa **** *** {{{ {{ { ";
 		
 //		System.out.println("\r 1 : 단어 찾기");
@@ -77,9 +77,12 @@ public class Regex1 {
 		
 		
 		System.out.println("\r8 : 다양한 타입의 phone number 찾기");
-		regexChecker("([0-9]{1,2}\\-)?(\\(?[0-9]{3}\\)?)(-| )", longString);
-		// 1-(412)555-1212  (412)555-1212  412-555-1234  412 555-1234
+		regexChecker("(\\(?[0-9]{2}(\\)|-)?)?([05]{3})(-| )?([3]{3})(-|\\s)?([0-9]{4})", longString);
+		// 055-333-6852 055 333 6852 82-055-333-6852 (82)055-333-6852
 		
+		
+		
+		regexReplace(longString); // __ longString 에서 "\\s{2}" 를 찾아 ",  " 로 변환한 후 console 출력함
 	}
 	
 	public static void regexChecker(String theRegex, String str2Check) {
@@ -97,6 +100,13 @@ public class Regex1 {
 		}
 		
 	}
+	
+	public static void regexReplace(String str2Replace) {
+		
+		Pattern replace = Pattern.compile("\\s{2,}");
+		Matcher regexMatcher = replace.matcher(str2Replace);
+		System.out.println(regexMatcher.replaceAll(", "));
+	}
 }
 
 
@@ -104,8 +114,5 @@ public class Regex1 {
 
 /*
  * 질문 : 
- * 1. meaning of _ and -
- * 2. 9:43 : What are the parenthesis for in "(\\{+)" ?
- * 3. "." seems to work either way of "." and "\\.". Am I correct?
- * 4. 13:54  : Earlier in the video, "\\s" was referred as white space but can you also use " " for it?
+ * 13:54  Earlier in the video, "\\s" was referred as white space but can you also use " " for it?
  * */
