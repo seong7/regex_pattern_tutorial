@@ -73,7 +73,7 @@ Regex : Regular Expression (정규식)
 [0-9] : digit		
 \\d  : digit  ([0-9] 와 동일)
 \\D  : not digit
-{5}  : length = 5
+==> "\\d{4}"  와  "[0-9]{4}" 는 동일
   </pre>
  </li>
 </ul>
