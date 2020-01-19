@@ -1,5 +1,4 @@
 # Regex Pattern
-<br/>
 
 <h2>References</h2>
 <ul>
