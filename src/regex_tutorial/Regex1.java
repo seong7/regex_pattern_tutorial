@@ -72,12 +72,12 @@ public class Regex1 {
 		
 		System.out.println("\r7 : email 주소 찾기");
 		regexChecker("[A-Za-z0-9._%-]+@[A-Za-z0-9._-]+\\.[A-Za-z]{2,4}", longString);
-		// johnsmith@gmail.com
+		// johnsmith._%-@gmail.com
 		
 		
 		
 		System.out.println("\r8 : 다양한 타입의 phone number 찾기");
-		regexChecker("([0-9]{1,2}\\-)", longString);
+		regexChecker("([0-9]{1,2}\\-)?(\\(?[0-9]{3}\\)?)(-| )", longString);
 		// 1-(412)555-1212  (412)555-1212  412-555-1234  412 555-1234
 		
 	}
@@ -89,7 +89,7 @@ public class Regex1 {
 		
 		while(regexMatcher.find()) {
 			if(regexMatcher.group().length() != 0) {
-				System.out.println(regexMatcher.group().trim());
+				System.out.println("\r"+ regexMatcher.group().trim());
 			}
 			
 			System.out.println("Start index : " + regexMatcher.start());
