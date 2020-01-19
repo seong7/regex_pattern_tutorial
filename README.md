@@ -1,4 +1,5 @@
 # Regex Pattern
+Regex : Regular Expression (정규식)
 
 <h2>References</h2>
 <ul>
