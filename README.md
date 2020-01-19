@@ -52,6 +52,14 @@ Regex : Regular Expression (정규식)
   </pre>
  </li>
  <li>
+  한글
+  <pre>
+[ㄱ-ㅎ]  : 자음
+[ㅏ-ㅣ]  : 모음
+[가-힣]  : 자음 + 모음
+  </pre>
+ </li>
+ <li>
   Word
   <pre>
 \\w  : any type of word 검색   ("[A-Za-z0-9_]" 와 동일)
