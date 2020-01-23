@@ -46,7 +46,7 @@ var regexPattern = new RegExp(/^\s*?[1|2]\s*?$/);
         // 첫글자 (공백 포함가능) 1 또는 2 {길이1 _생략가능} (공백 포함가능) 끝글자 1 또는 2
 
 function checkAnswerPattern(answer){
-    if(regexPattern.test(answer)){
+    if(regexPattern.exec(answer)){
         return true;
     }else{
         alert('정답은 숫자 1 또는 2 를 입력하세요.');
