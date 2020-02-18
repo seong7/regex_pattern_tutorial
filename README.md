@@ -99,7 +99,7 @@ $          : 끝 글자 ("^[1|2]{1}$")  : 첫 글자가 1 또는 2 + 길이 1 + 
     Java
    </li>
    <li>
-    JavaScript [>>](https://beomy.tistory.com/21)
+    JavaScript (https://beomy.tistory.com/21)
    <pre>
     regex/g : 전역 검색
     regex/i : 대소문자 구별 없이 검색
