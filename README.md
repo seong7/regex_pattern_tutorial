@@ -41,19 +41,26 @@ $          : 끝 글자 ("^[1|2]{1}$")  : 첫 글자가 1 또는 2 + 길이 1 + 
 *  : 앞에 쓰인 문자 또는 숫자의 길이를 0 이상으로 정함 (예시:  "a*p" : p, ap, aaap 등 찾음)
   </pre>
  <pre>
- 예시)
+ 예시1)
  var regexPattern = new RegExp(/^\s*?[1|2]\s*?$/); 
-         // 첫글자 (공백 포함가능) 1 또는 2 {길이1 _생략가능} (공백 포함가능) 끝글자 1 또는 2
-
+         // 첫글자 (공백 포함가능) 1 또는 2 {길이1 _생략가능} (공백 포함가능) 끝글자 1 또는 2  
     function checkAnswerPattern(answer){
-        if(regexPattern.exec(answer)){
-            return true;
-     }else{
-         alert('정답은 숫자 1 또는 2 를 입력하세요.');
-         return false;
+      if(regexPattern.exec(answer)){
+             return true;
+      }else{
+          alert('정답은 숫자 1 또는 2 를 입력하세요.');
+          return false;
+      }
      }
-    }
-</pre>
+  </pre>  
+  <pre>
+예시2)
+ string.match(/^\d{4}$|^\d{6}$/) 
+ // 길이 4 또는 6인 숫자인지 체크 (^ $ 로 묶어 string 전체에 대한 검사)
+   
+  string.match(/\D+/g) 
+  // 길이 1 이상인 숫자가 아닌 문자 검색
+  </pre> 
  </li>
  <li>
   Characters
